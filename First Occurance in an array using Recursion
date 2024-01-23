@@ -1,0 +1,22 @@
+//First Occurance in an array using Recursion 
+#include <iostream>
+using namespace std;
+int FirstOccu(int *arr,int key,int n)
+{
+    //base case
+    if(n==0)
+    {
+        return -1;
+    }
+    //Recursive Case
+    if(arr[0]==key)return 0;
+    int smallAns=FirstOccu(arr+1,key,n-1);
+    //using smallAns to bigAns
+    if(smallAns==-1)return -1;
+    else return smallAns+1;
+}
+int main() {
+    int key=7;
+    int arr[7]={1,3,7,4,5,7,6};
+    cout<<FirstOccu(arr,key,7)<<endl;
+}
