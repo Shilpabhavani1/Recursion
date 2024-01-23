@@ -1,0 +1,19 @@
+//Factorial of a number using Recursion 
+#include <iostream>
+using namespace std;
+int Factorial(int n)
+{
+    //base case
+    if(n==0 or n==1)
+    {
+        return 1;
+    }
+    //Recursive case
+    int ans=Factorial(n-1);
+    return n*ans;
+}
+int main() {
+    int n;
+    cin>>n;
+    cout<<Factorial(n)<<endl;
+}
