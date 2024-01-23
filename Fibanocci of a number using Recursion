@@ -1,0 +1,21 @@
+//Fibanocci of a number using Recursion 
+#include <iostream>
+using namespace std;
+int Fib(int n)
+{
+    //base case
+    if(n==0 or n==1)
+    {
+        return n;
+    }
+    //Recursive case
+    int smallAns1=Fib(n-1);
+    int smallAns2=Fib(n-2);
+    return smallAns1+smallAns2;
+    // return Fib(n-1)+Fib(n-2);
+}
+int main() {
+    int n;
+    cin>>n;
+    cout<<Fib(n)<<endl;
+}
