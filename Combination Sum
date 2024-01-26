@@ -1,0 +1,29 @@
+class Solution {
+    vector<vector<int>> res;
+public:
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<int>k;
+        combination(candidates,target,0,k);
+        return res;
+    }
+        void combination(vector<int>& candidates, int target,int idx,vector<int>&k)
+        {
+            if(idx==candidates.size())
+            {
+                if(target==0)
+                {
+                    res.push_back(k);
+                }
+                return;
+            }
+            if(target>=candidates[idx])
+            {
+                k.push_back(candidates[idx]);
+                combination(candidates,target-candidates[idx],idx,k);
+                k.pop_back();
+            }
+            combination(candidates,target,idx+1,k);
+        }
+        
+    
+};
