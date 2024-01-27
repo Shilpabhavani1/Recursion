@@ -1,0 +1,17 @@
+//Print Numbers 1 to N and Nto 1
+#include<bits/stdc++.h>
+using namespace std;
+void Print(int i,int n)
+{
+    if(i>n) return;
+    // cout<<i<<endl;//1 To N 1 , 2 , 3 , 4
+    Print(i+1,n);
+    cout<<i<<endl;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    Print(1,n);
+}
