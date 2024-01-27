@@ -1,0 +1,21 @@
+//Sum of first N Natural Numbers
+#include<bits/stdc++.h>
+using namespace std;
+void Print(int n)
+{
+    if(n==0) return;
+    int sum=0;
+    for(int i=1;i<n;i++)
+    {
+        sum=sum+i;
+        cout<<sum;
+    }
+    cout<<sum;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    Print(n);
+}
