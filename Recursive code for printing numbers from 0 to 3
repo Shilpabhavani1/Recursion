@@ -1,0 +1,16 @@
+//Recursive code for printing numbers from 0 to 3
+#include<bits/stdc++.h>
+using namespace std;
+int c=0;
+void Print()
+{
+    if(c==3) return;
+    cout<<c<<endl;
+    c=c+1;
+    Print();
+}
+
+int main()
+{
+    Print();
+}
